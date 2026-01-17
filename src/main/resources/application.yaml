@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: focuslice_backend
+  datasource:
+    hikari:
+      connection-timeout: 10000
+      validation-timeout: 5000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      minimum-idle: 2
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: HikariPool
+      leak-detection-threshold: 60000
+      driver-class-name: org.postgresql.Driver
+      username: focuslice
+      password: focu2_slice
+    url: jdbc:postgresql://localhost:5432/focuslice
+  jpa:
+    hibernate:
+      ddl-auto: update # update schema if needed
